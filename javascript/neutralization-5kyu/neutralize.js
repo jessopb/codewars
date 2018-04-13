@@ -7,7 +7,8 @@ function neutralize (formula1, formula2) {
     1) asign base and acid.
     2) store the anion and cation.
     3) store OH and H as Sum the Os and Hs.
-    comnbine the cation(metal)+anion. sum the water.
+    4) combine the cation(metal)+anion.
+    5) calculate the LCD to make H2O
   */
 
   let base = "", acid = ""
@@ -50,11 +51,6 @@ function neutralize (formula1, formula2) {
   }
 
   if ( !base || !acid ) return null
-  //isInteger()
-  //return parse(acid)
-
-
-
 
 }
 module.exports = neutralize
