@@ -33,5 +33,6 @@ def sum_two_smallest_numbers(numbers):
             raise TypeError('all list members must be integers')
         else:
             pass
+
     numbers.sort()
     return numbers[0] + numbers[1]
