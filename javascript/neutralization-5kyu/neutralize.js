@@ -58,4 +58,3 @@ function neutralize (formula1, formula2) {
 
 }
 module.exports = neutralize
-console.log(neutralize('Hi5Cl', 'H3PO4(OH)') )
