@@ -10,19 +10,17 @@ function lcm(int1, int2) {
         {
           if ((i % n == 0) && (j % n == 0))
           {
-            console.log(' i:' + i + ' j:' + j + ' m:' + m + ' n:' + n + ' h: ' + h)
             return findlcm(i, j, m / n, h)
           }
           else return m
         }
-        
       } //for
-
     }
-    else { return m }
-
+    else
+    {
+      return m
+    }
   }//findlcm
   return findlcm(int1, int2, mult, high)
 }
-console.log(lcm(3,27))
 module.exports = lcm
