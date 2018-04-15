@@ -21,15 +21,23 @@ function neutralize (formula1, formula2) {
      3) get LCM
     4) combine the cation(metal)+anion.
     5) calculate the LCD to make H2O
+
+    Refactor:
+      regex in formatIon,
+      regex in parseCation,
+      lcm
+      One function parses both anion and cation
+      
+
   */
 
   let base = '', acid = ''
   let anion = {string: '', charge: 0}, cation = {string: '', charge: 0}
 
   //helper functions
-  let acidOrBase = (f) => { f.includes("OH") ? base = f : acid = f }
+  const acidOrBase = (f) => { f.includes("OH") ? base = f : acid = f }
 
-  let parseCation = (b) => {
+  const parseCation = (b) => {
     if (b.match(/[(]OH[)][0-9]*/))
     {
       cation.string = b.substr( 0, b.search(/[(]OH[)][0-9]+/) )
@@ -47,7 +55,7 @@ function neutralize (formula1, formula2) {
 
   }
 
-  let parseAnion = (a) => {
+  const parseAnion = (a) => {
 
       anion.string = a.substring(a.match(/H[0-9]*/)[0].length)
       if (a.match(/H[0-9]+/))
