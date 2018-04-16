@@ -1,5 +1,5 @@
 def sum_two_smallest_numbers(numbers):
-
+#<editor-fold atom package: custom folds
     """ return sum of the smallest two integers in a list
     >>> sum_two_smallest_numbers([37,51,95,23])
     60
@@ -23,6 +23,7 @@ def sum_two_smallest_numbers(numbers):
      ...
     TypeError: input must be integer list
     """
+    #</editor-fold>
 
     if not isinstance(numbers, list):
         raise TypeError('input must be integer list')
